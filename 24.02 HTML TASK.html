@@ -1,0 +1,129 @@
+<!--1. You are designing a price comparison table for an e-commerce website. The table should
+compare three different subscription plans: Basic, Standard, and Premium. Each plan has
+different features, including:
+• Price per month
+• Number of users
+• Storage space
+• Customer support availability
+Task:
+Create an HTML table that:
+1. Uses <thead>, <tbody>, and <tfoot> appropriately.
+2. Highlights the Premium plan by making it stand out visually.
+3. Uses the <colspan> or <rowspan> attribute where needed for better readability.
+4. Apply border and background colours for the table-->
+
+<html>
+
+<title>E COMMERCE</title>
+<body style="background-color:Seashell">
+<head><h1 style="color:red;text-align:center;">E-COMMERCE DETAILS</h1></head>
+<hr>
+<style>
+
+table,th,td {border:3px solid black;border-collapse:collapse;border-radius:12px;border-style:dotted;border-color:blue;}	
+th,td{background-color:pink;}
+</style>
+<table style="width:80%">
+<caption style="color:green;">ecommerce</caption>
+
+
+<tr>
+<th>   </th>
+<th>BASIC</th>
+<th>STANDARD</th>
+<th>PREMEIUM</th>
+</tr>
+<tr>
+<th>Price</th>
+<td>100</td>
+<td>200</td>
+
+<td style="color:red">300</td>
+</tr>
+<tr>
+<th>Number of users</th>
+<td>150</td>
+<td>100</td>
+<td style="color:red">40</td>
+
+</tr>
+<tr>
+<th>Storage space</th>
+<td>1 room</td>
+<td>2 room</td>
+<td style="color:red">3 room</td>
+</tr>
+<tr>
+<th> customer support availabiltity</th>
+<td>500</td>
+<td>550</td>
+<td style="color:red">1000</td>
+
+
+<style>
+
+table,th,td {border:3px solid black;border-collapse:collapse;border-radius:12px;border-style:dotted;border-color:blue;}	
+th,td{background-color:pink;}
+</style>
+<table style="width:80%">
+<caption style="color:green;">ecommerce</caption>
+<th rowspan=5>Basic</th>
+<tr>
+<td>Price</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Numebr of users</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>1room</td>
+</tr>
+<tr>
+<td>Customer availability</td>
+<td>200</td>
+</tr>
+
+<th rowspan=5>Standard</th>
+<tr>
+<td>Price</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Numebr of users</td>
+<td>500</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>2room</td>
+</tr>
+<tr>
+<td>Customer availability</td>
+<td>550</td>
+</tr>
+<th rowspan=5>Premium</th>
+<tr>
+<td>Price</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Numebr of users</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>3 rooms</td>
+</tr>
+<tr>
+<td>Customer availability</td>
+<td>1000</td>
+</tr>
+
+<hr>
+<hr>
+
+
+
+
+
