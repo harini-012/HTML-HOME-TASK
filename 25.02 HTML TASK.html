@@ -1,0 +1,56 @@
+<!--1.You are designing a student information table for a school website. The table must meet the
+following requirements:
+1. The "Grade" column should have a light yellow background.
+2. The "ID" column should be hidden from view.
+3. Odd-numbered rows should have a light gray background, while even-numbered rows
+should have a white background.
+4. Each cell should have 10px padding and a bottom border.
+5. The table should have 5px cell spacing.
+-->
+
+<html>
+<title>Student details</title>
+<h1 style="text-align:center;color:blue;">Student details</h1>
+<table style="width:80%">
+<colgroup>
+<col span="2">
+<col span="1" style="visibility:collapse">
+
+</colgroup>
+<style>
+table{border-collapse:collapse;}
+
+table{border-spacing:5px;}
+
+th,td{padding:5px}
+tr:nth-child(even){background-color:gray}
+tr:nth-child(odd){background-color:white}
+</style>
+<tr>
+<th>Name</th>
+<th>Grade</th>
+<th>id</th>
+</tr>
+<tr>
+<td>Harini R</td>
+<td>I year</td>
+<td>E24AI012</td>
+</tr>
+<tr>
+<td>Poorani R</td>
+<td>II year</td>
+<td>E24AI013</td>
+</tr>
+<tr>
+<td>Ranjani V</td>
+<td>III year</td>
+<td>E24AI014</td>
+</tr>
+<tr>
+<td>Rajesh G</td>
+<td>Final year</td>
+<td>E24AI016</td>
+</tr>
+
+
+
