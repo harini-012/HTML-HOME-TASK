@@ -1,0 +1,51 @@
+<!--1. Create an HTML file named registration_form.html.
+2. Use the <form> tag to create a user registration form with the following fields:
+o Full Name (Text input)
+o Email (Email input)
+o Password (Password input)
+o Gender (Radio buttons: Male, Female, Other)
+o Hobbies (Checkboxes: Reading, Sports, Music)
+o Comments (Textarea for additional input)
+o Country (Dropdown with at least 4 options)
+3. Ensure the form fields have proper labels and name attributes.
+4. Save and test your form in a web browser.-->
+
+<html>
+<title>registration form</title>
+<h1 style="text-align:center">Registration form</h1><hr>
+<form>
+<label for="name">1.Full name</label>
+<input type="text" id="name" name="name"><br><br>
+<label for="password">2.Password</label>
+<input type="password" name="pwd" placeholder="Enter the password here"><br><br>
+<label>3.Select Gender</label><br><br>
+<input type="radio" name="gender" value="Male">
+
+<label for="male">Male</label><br>
+<input type="radio" name="gender" value="Female">
+
+<label for="female">Female</label><br>
+<input type="radio" name="gender" value="Others">
+<label for="others">Others</label><br><br>
+<label>4.Tick the hobbies</label><br><br>
+<input type="checkbox" id="c1" name="c1" value="Reading">
+<label for="c1">Reading</label>
+<input type="checkbox" id="c2" name="c2" value="Cycling">
+<label for="c2">Cycling</label>
+<input type="checkbox" id="c3" name="c3" value="Tc watching">
+<label for="c3">watching tv</label><br><br>
+<label>5.Tell if there is other hobbies</label><br>
+<textarea cols:"40" rows:"100" name="comment"> Enter the additional hobbies</textarea><br><br>
+<label>6.Select your country</label>
+<select>
+ <option value=""> </option>
+<option value="India">"India"</option>
+<option value="Canada">"Canada"</option>
+<option value="Australia">"Australia"</option>
+<option value="Newzealand">"Newzealand "</option>
+</select>
+<hr>
+<h3 style="text-align:center">Thank you for registering</h3>
+  
+
+
