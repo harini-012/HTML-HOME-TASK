@@ -1,0 +1,35 @@
+<!--1. Create a basic feedback form where users submit their feedback.
+The Flask backend processes the form and displays a thank-you
+message.-->
+<!DOCTYPE html >
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width,initial scale=1.0">
+   <title>Feedback Form</title>
+</head>
+<body style="background-color:Seashell">
+   <h2 style="text-align:center">Feedback Form</h2>
+   <form action="/submit" method="post">
+      <label for="name">Name:</label>
+	  <input type="text" id="name" name="name" required>
+	    <br><br>
+		<label for="rno">rno:</label>
+		<input type="text" id="rno" name="rno" required>
+		<br><br>
+	  <label>How would you rate our videos?</label><br><br>
+	  <input type="radio" name="question" value="good">
+      <label for="question1">Good</label><br>
+	  <input type="radio" name="question" value="bad">
+	  <label for="question2">Bad</label><br><br>
+     
+	  
+	  <label>Please enter your comments</label><br><br>
+	  <textarea cols:"40" rows:"100" name="comment">Enter your comments</textarea><br><br>
+	  
+	  <button type="submit">Submit</button>
+
+  </form>
+  </body>
+  </html>
+	  
