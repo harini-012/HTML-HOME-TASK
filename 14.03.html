@@ -1,0 +1,64 @@
+<!--1. You are tasked with building a simple Employee Registration Form using Flask. The form should
+include various input fields and use form controls like text fields, radio buttons, checkboxes,
+dropdowns, and file uploads. Additionally, the form should be styled within the HTML template.
+Once submitted, the Flask server should process the form data and display it back to the user.
+Note: Try any sample such as Event registration, Hotel room booking. Choose any sample on your
+own.
+Example fields for employee registration form : Full Name (Text Input)
+• Email (Email Input)
+• Phone Number (Number Input)
+• Gender (Radio Buttons: Male, Female, Other)
+• Skills (Checkboxes: Python, JavaScript, Java, C++)
+• Department (Dropdown: HR, IT, Finance, Marketing)
+• Profile Picture (File Upload)
+• Date of Joining (Date Picker)
+• Submit Button-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset "UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<title>hotel booking site</title>
+<h1 style="text-align:center;color:blue"> "Unwind and rejuvenate in our haven". </h1>
+<body style="background-color:beige">
+<img src="https://skift.com/wp-content/uploads/2015/04/bookingcom.png" height="1000" width="1600">
+<marquee behavior="alternate" direction="right">
+<h3 style="color:violet;font-size:30px">Let's Start booking</h3>
+</marquee>
+<form method="post" enctype="multipart/form-data">
+<label for="name" >Name:</label>
+<input type="text" name="name" id="name"><br><br>
+<label for="email">Email:</label>
+<input type="email" name="email" id="email"><br><br>
+<label for="contact">Contact no:</label>
+<input type="number" name="contact" id="contact"><br><br>
+<label for="gender">Gender:</label>
+<label for="male">Male</label>
+<input type="radio" name="gender" value="male">
+<label for="female">Female</label>
+<input type="radio" name="gender" value="female"><br><br>
+<label for ="type">Type of room:</label>
+<label for="large">Large family</label>
+<input type="checkbox" name="type" value="largefamily">
+<label for="small">Small family</label>
+<input type="checkbox" name="type" value="smallfamily">
+<label for="single">Single</label>
+<input type="checkbox" name="type" value="Single"><br><br>
+<label for="state">Select the State</label>
+<select id="state" name="state">
+<option value=" ">  </option>
+<option value="tamilnadu">Tamilnadu</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Delhi">Delhi</option>
+</select><br><br>
+<label for="start-date">Check in date</label>
+<input type="date" name="date" ><br><br>
+<label for="end-date">Check out date</label>
+<input type="date" name="outdate"><br><br>
+<label for="file">Upload your identity proof</label>
+<input type="file" id="file" name="file">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</html>
