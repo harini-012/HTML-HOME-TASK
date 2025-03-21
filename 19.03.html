@@ -1,0 +1,60 @@
+<!--1. Design a Newsletter Subscription Form with:
+• A heading/title
+• An input field for the user's email
+• A subscribe button
+• Some small privacy note text below the form
+You'll use CSS Box Model properties (margin, padding, border, width) and Text properties (text-align,
+text-transform, letter-spacing, line-height, etc.) to make the form clean and attractive.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1 style="background-color:red;text-align:center">Times of India yearly subscription</h1><br><br>
+<center>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTngtf8_8fZPVrJiNtxVibrjSHXnGwd2T7g&s" height="300"; width="300">
+</center>
+<style>
+.open{background-color:pink;border-width:10px 10px 10px}
+</style>
+<p class="open">
+Stay informed with the latest news, insights, and exclusive stories delivered straight to your inbox.<br>
+
+📩 Enter your email to subscribe:<br>
+
+
+🔔 Get Daily Updates <br>
+
+📰 We value your privacy. You can unsubscribe at any time.</p>
+<style>
+.form {
+background:lightblue;
+padding: 20px;
+margin: 100px auto; 
+width: 350px; 
+border-radius:10px
+text-align: left;
+text-transform:capitalize
+}
+.form label{font-weight: bold;
+display: block;
+margin-bottom:5px;}
+.form input {
+width: 50%;
+padding: 8px;
+margin-bottom: 15px;
+border: 3px solid
+border-radius:10px;}
+.form submit{width:100%;padding:10px;border-radius:5px;}
+</style>
+<center>
+<form  method="post" enctype="multipart/form-data" class="form">
+<label for="name">Enter your Name:</label>
+<input type="text" name="name" id="name"><br><br>
+<label for="email" >Enter your email id:</label>
+<input type="text" name="email" id="email"><br><br>
+<label for="number" >Enter your mobile number:</label>
+<input type="text" name="no" id="no"><br><br>
+<button type="submit" onclick="alert('Successfully Subscribed')">Subscribe newsletter</button>

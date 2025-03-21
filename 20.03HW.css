@@ -1,0 +1,10 @@
+a:link{color:pink;
+display:inline-block;
+text-decoration-style:wavy;
+background-color:violet;
+}
+a:visited{color:yellow;
+}
+a:hover{color:red;}
+a:active{color:green;}
+
