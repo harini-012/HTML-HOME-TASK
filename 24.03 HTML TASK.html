@@ -1,0 +1,87 @@
+<!--1. Create a business card with two overlapping boxes:
+• A main box that holds content.
+• A badge box that slightly overlaps the main box using positioning and is placed above it
+using z-index.
+• Use inline-block to align boxes.
+• Ensure any overflowing content is controlled using auto/scroll.
+Note : Add company name & website,Include social media icons,Make it responsive and Add hover
+effects or transitions-->
+
+<html>
+<title>Green Plants</title>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpV8HAzppMYZDfMFu6pnQVcyba-E3dUDMMbw&s" type="image/x-icon">
+<h1 style="text-align:center;color:yellowgreen;font-size:35px;">Welcome to Green World!</h1>
+<style>
+
+
+
+nav a:link{color:blue;margin:0 40px;text-decoration:none;font-size:25px;}
+a:visited{color:green;}
+a:hover{color:red;}
+a:hover{cursor:crosshair}
+
+.card{position:relative;
+display:inline-block;
+height:450px;
+background-color:lightblue;
+}
+.d3{position:relative;
+z-index:1;
+border:3px solid hotpink;
+height:400px;
+margin:30px;
+background-color:beige;
+overflow:scroll;
+}
+.badge{position:absolute;
+top:-10px;
+right:-10px;
+background-color:red;
+padding:10px;10px;
+height:50px;
+border-radius:50px;
+
+z-index:1;}
+</style>
+
+
+
+<div class="card"><h1 style="text-align:center">Why we are here?</h1><br>
+ <div class="badge">NEW</div>
+ <h2>Green Plants</h2>
+ <p>Plant Repair & Maintenance</p>
+ <p>Porur, Chennai</p>
+ <p>🌿 Nature at Your Service!</p>
+The Plant Company, based in Porur, Chennai, is a company specializing in plant repair and maintenance services, particularly for construction products, known for its meticulous attention to detail and customer-centric approach. 
+Here's a more detailed look: 
+Specialization:
+The company focuses on providing top-notch repair and maintenance services for construction products.
+Location:
+They are located in Porur, Chennai.
+Services:
+They offer both routine maintenance and urgent repairs, emphasizing exceptional service and a customer-centric approach.
+Reputation:
+The company is known for its meticulous attention to detail and unwavering commitment to quality.
+<div class="d3"><h1 style="text-align:center">How you can contact us</h1><br>
+Phone: +91-44-2444-5555 <br>
+Email: info@example.com <br>
+Contact Form: You can find a contact form on our website to submit inquiries or messages. <br>
+Social Media: We also have a presence on various social media platforms, where you can send us a message. <br>
+Hours of Operation: Our office hours are from 9 am to 5 pm, Monday to Friday.<br>
+Response Time: We aim to respond to all inquiries within 24 hours.<br>
+Self-Help Resources: You can also find answers to frequently asked questions on our website.<br> <br><br>
+At Green Plants, we believe in bringing nature closer to you. Our mission is to provide expert plant care, repair, and maintenance services to ensure that your greenery thrives in any environment.
+
+🌱 Our Specialization:
+We focus on plant health, maintenance, and sustainable gardening solutions, ensuring that your plants remain lush, vibrant, and long-lasting.
+
+📍 Where We Operate:
+Based in Porur, Chennai, we serve residential, commercial, and industrial clients, helping them maintain their green spaces effortlessly.
+<center>
+<nav>
+<a  href="https://en.wikipedia.org/" >Plants</a>
+<a href="https://en.wikipedia.org/" >Home</a>
+<a  href="https://www.website.com/">Contact</a><br><br><br>
+</nav>
+</center>
+</div>

@@ -1,0 +1,80 @@
+<!--Imagine a smart home system where a user can turn a light bulb on and off using a toggle switch.
+When the light is turned on, it gradually brightens with a glowing effect and flickers slightly for
+realism. When turned off, it dims smoothly back to darkness.
+Requirements:
+1. Use transition for a smooth on/off effect.
+2. Use animation for a realistic flicker when the light turns on.
+3. Use a checkbox/button or any input elements as a toggle switch.
+4. Change the background subtly when the light is on to simulate ambient lighting-->
+
+
+<html>
+<title>Car headlights</title>
+<h1 style="Text-align:Center">Welcome to Hero Honda showroom</h1>
+<hr style="border:dotted">
+<h1 style="text-align:center;font-family:Brush Script MT;color:Hotpink">Let us learn about the headlights</h1>
+<hr style="border:ridge;">
+<fieldset style="border:dashed;border-width:5px;">
+<legend>Type of headlights</legend>
+<label><h1 style="font-family:Brush Script MT;color:indigo">Halogen Headlights</h1><br>
+Most common type, affordable, and easy to replace.<br>
+Uses a tungsten filament inside a halogen gas-filled bulb.<br>
+Produces a yellowish light, which is not as bright as newer technologies.<br>
+<h1 style="font-family:Brush Script MT;color:indigo">LED (Light Emitting Diode) Headlights</h1><br>
+More energy-efficient than halogen bulbs.<br>
+Produces bright, white light and has a longer lifespan.<br>
+Found in modern cars due to their efficiency and sleek design.<br>
+<h1 style="font-family:Brush Script MT;color:indigo">HID (High-Intensity Discharge) / Xenon Headlights</h1><br>
+
+Brighter than halogen but more expensive.<br>
+
+Produces bluish-white light with better road coverage.<br>
+
+Takes a moment to warm up after switching on.<br>
+
+<h1 style="font-family:Brush Script MT;color:indigo">Laser Headlights</h1><br>
+
+The latest technology, mainly in high-end vehicles.<br>
+
+Offers the brightest and farthest illumination.<br>
+
+Expensive but highly energy-efficient.<br>
+</label>
+</fieldset><br><br>
+<style>
+body{transition:background-color 1s ease;}
+.container{transition:background-color 1s ease;
+background-color:#FFFF99;}
+#toggle{display:none;}
+
+label{color:blue;
+background-color:yellow;
+
+transition:background-color 1s ease,transform 2s,width 3s,height2s;
+}
+#toggle:checked ~ .container {background-color:#FFD700;}
+#toggle:checked+label{opacity:0.8;background-color:#FFD700;width:10%;height:120px;}
+#toggle:checked~img{opacity:1; filter:brightness(150%)drop-shadow(0 0 30px #FFFF33);width:10%;height:120px;}
+#toggle:checked ~ .container img {opacity: 1;filter:brightness(150%)drop-shadow(0 0 30px #FFFF33);transform:rotate(180deg) scale(0.5)	}
+
+}
+.container img{transition: filter 1s ease-in-out, opacity 1s ease-in-out, transform 1s ease;
+filter: brightness(30%);
+transform: rotate(0deg)};
+
+</style>
+<body>
+<h2 style="text-align:Center;color:red;">Check the headlight of a model by clicking the on button</h2><br><br>
+<input type="checkbox" id="toggle">
+<label for="toggle">Headlight on</label>
+<div class="container">
+<h2 style="text-align:center">The headlights in car</h2>
+<center>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR327_Zgt4iASW_WD0UR65-oVX0UvOG5tFpCQ&s" height="500" width="500">
+</div>
+</center>
+<marquee>
+<h1 style="text-align:center">Thank you if you place order we will get you trending  headlights</h1>
+</marquee>
+</body>
+</html>
