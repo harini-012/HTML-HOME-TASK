@@ -1,0 +1,121 @@
+<!--1. You need to create a responsive image gallery(Example – wildlife gallery with a small description
+about animals) where images maintain their aspect ratio but fit within different shapes (ellipse ,
+circle and polygon) without distortion.
+Note: Use various shapes and choose any theme for the gallery-->
+
+
+<html>
+<title>Our Tamilnadu-Our-pride</title>
+<body style="background-color:lightgray">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=serif">
+<style>
+.h1{font-family:serif;
+font-size:35px;
+color:olive;
+text-align:center;
+}
+.nav {word-spacing:100px;
+
+font-size:30px;
+}
+div{border-radius:10px;
+border-color:indigo;
+font-size:20px;
+font-family:serif;
+border-style:dotted;
+position:relative;
+overflow:auto;}
+.culture{clip-path:circle(50%);
+object-fit:cover;
+width:300px;
+height:300px;
+shape-outside:circle(50%);
+float:left;}
+.dance{clip-path:polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 50% 70%, 
+        21% 91%, 32% 57%, 2% 35%, 39% 35%);
+object-fit:contain;
+width:300px;
+shape-outside:polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 50% 70%, 
+        21% 91%, 32% 57%, 2% 35%, 39% 35%));
+float:left;}
+.attire{clip-path:polygon(50% 15%, 61% 7%, 75% 5%, 88% 13%, 95% 25%, 
+        91% 40%, 75% 60%, 50% 85%, 25% 60%, 9% 40%, 
+        5% 25%, 12% 13%, 25% 5%, 39% 7%);
+
+object-fit:cover;
+width:300px;
+shape-outside:polygon(50% 15%, 61% 7%, 75% 5%, 88% 13%, 95% 25%, 
+        91% 40%, 75% 60%, 50% 85%, 25% 60%, 9% 40%, 
+        5% 25%, 12% 13%, 25% 5%, 39% 7%);
+
+float:left;}
+.language{clip-path:polygon(0% 30%, 10% 30%, 10% 0%, 90% 0%, 90% 30%, 100% 30%, 
+        100% 70%, 90% 70%, 90% 100%, 10% 100%, 10% 70%, 0% 70%);
+object-fit:cover;
+width:300px;
+shape-outside:polygon(0% 30%, 10% 30%, 10% 0%, 90% 0%, 90% 30%, 100% 30%, 
+        100% 70%, 90% 70%, 90% 100%, 10% 100%, 10% 70%, 0% 70%);
+float:left;}
+
+</style>
+<h1 class="h1">Our Tamilnadu</h1>
+<marquee>
+<h2 style="color:hotpink">Let's see the culture and tradition of tamilnadu</h2>
+</marquee>
+<center>
+<nav class="nav">
+<a style="text-decoration:none;"href="#culture">Culture</a>
+<a style="text-decoration:none;"href="#dance">Dance</a>
+<a style="text-decoration:none;" href="#attire">Attire</a>
+<a style="text-decoration:none;" href="#language">Language</a>
+</nav><br><br>
+
+<div id="culture">
+<h1 class="h1">Culutre and tradition of Tamilnadu</h1>
+<hr style="border:dotted;color:indigo">
+<img class="culture" src="https://www.ritiriwaz.com/wp-content/uploads/2019/06/Tamil-Nadu-Culture.jpg">
+<p>Tamil Nadu's culture is a vibrant blend of ancient traditions, art, music, and literature, rooted in the Dravidian heritage with a distinct language, Tamil, and unique architectural, artistic, and dance styles. 
+Architecture:
+Known for magnificent temples with intricate carvings and sculptures, like the Brihadeeswarar Temple in Thanjavur and the Meenakshi Temple in Madurai. 
+Art & Crafts:
+Famous for Tanjore paintings, bronze sculptures (especially Nataraja), and silk weaving. Literature:
+Tamil literature has a rich history, with works from the Sangam period (3rd century BC–3rd century AD) and modern forms like novels and short stories. 
+Festivals:
+Pongal (a harvest festival), Navaratri (celebrating the triumph of good over evil), and other vibrant celebrations are integral to Tamil Nadu culture. Cuisine:
+Tamil Nadu cuisine is known for its simplicity, rich flavors, and generous use of spices, with both vegetarian and non-vegetarian dishes. 
+Folk Arts:
+Include music (Naattupurapaattu), dance styles, songs, games, crafts, herbal medicine, food, sculpture, costumes, stories, proverbs, and mythology. 
+Traditional Dress:
+Popular traditional dresses include Kanjeevaram saree, Madurai Cotton saree, Coimbatore Cotton saree, Salem Silk saree, and Kancheepuram Silk saree. 
+Modern Influences:
+Tamil Nadu has embraced modernity while retaining its rich cultural heritage. 
+</div><br><br>
+<div id="dance">
+<h1 class="h1">Let's see the Dance of tamilnadu</h1>
+<hr style="border:dotted;color:indigo">
+<img class="dance" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd-gHYLSfn8qnVRFIXro5XMdjziuFB-e8ePg&s">
+Bharatanatyam is a major genre of Indian classical dance that originated from Tamil Nadu and practiced till today. It is one of the oldest classical dance forms of India. The dancer is usually dressed in a colorful silk sari with various jewelry, special anklets called salangai made up of small bells and hair plaited in a specific manner, decorated with flowers in a pattern called veni. The dance is characterized by flexing of torso with bent legs or flexed out knees combined with various footwork and a number of gestures known as abhinaya using various hand mudras, expressions using the eyes and other face muscle
+</div><br><br>
+<div id="attire">
+<h1 class="h1">Attire of Tamilnadu</h1>
+<hr style="border:dotted;color:indigo">
+<img class="attire" src="https://www.holidify.com/images/cmsuploads/compressed/ce5d56d214d66856b92455a933086ade--dresses-for-girls-baby-dresses_20171006174748.jpg">
+<P>Located in the southernmost part of India, Tamil Nadu is a state famous for extravagant temples, delectable food and rich culture. One significant aspect of Tamil Nadu's rich culture is its traditional clothing, which symbolizes the cultural essence of this south Indian state. A wide variety of materials like cotton, chiffon, silk, crepe silk, organza, georgette, micro silk and pattola silk is used in the dresses of Tamil Nadu. Let's find out more about Tamil Nadu attire.
+Traditional Dresses for Women
+Sari finds immense significance in the traditional clothing for women in Tamil Nadu. The popular Tamil poetry Cilappatikaram portrays females in a sari. Sari is a dress which women wear in offices, temples, parties and marriages. South Indian saris are famous across India for their intricate zari work. Kancheepuram sari is especially well known for its exquisite style. The colour, texture and style of a Kancheepuram sari are quite different from North Indian saris. The length of sari usually ranges from five to six yards.<BR>
+Traditional Dresses for Men
+The traditional dress of Tamil men is as elegant as the dress of women. Lungi is the most common bottom-wear for men in Tamil Nadu. It is wrapped around the waist and thighs. Lungi comes in different colours. It is the traditional dress worn by men in marriages too. This rectangular shape cloth is generally made with cotton. It is mostly worn with a shirt or Angavastra. Angavastram is another significant part of Tamil dressing. It is a piece of cloth wrapped around the shoulders. In early days Angavastram was used as upper clothing but now it is used above the shirt.</P>
+</div><br><br>
+<div id="language">
+<h1 class="h1">Language of Tamilnadu</h1>
+<hr style="border:dotted;color:indigo">
+<img class="language" src="https://media.istockphoto.com/id/1459300331/vector/tamil-letter-forming-the-word-tamil-vector-illustration.jpg?s=612x612&w=0&k=20&c=jaXZzpEUykX6-2KKYZCOAilGfaIofet_jPyAGwIOLnA=">
+<p>தமிழ் (Tamil language) தமிழர்களினதும் தமிழ் பேசும் பலரின் தாய்மொழி ஆகும். தமிழ், உலகில் உள்ள முதன்மையான மொழிகளில் ஒன்றும் செம்மொழியும் ஆகும். இந்தியா, இலங்கை, மலேசியா, சிங்கப்பூர் ஆகிய நாடுகளில் அதிக அளவிலும், ஐக்கிய அரபு அமீரகம், தென்னாப்பிரிக்கா, மொரிசியசு, பிசி, இரீயூனியன், திரினிடாடு போன்ற நாடுகளில் சிறிய அளவிலும் தமிழ் பேசப்படுகிறது. 1997-ஆம் ஆண்டுப் புள்ளி விவரப்படி உலகம் முழுவதிலும் 8 கோடி (80 மில்லியன்) மக்களால் பேசப்படும் தமிழ்,[13] ஒரு மொழியைத் தாய்மொழியாகக் கொண்டு பேசும் மக்களின் எண்ணிக்கை அடிப்படையில் பதினெட்டாவது இடத்தில் உள்ளது.[14] இணையத்தில் அதிகம் பயன்படுத்தப்படும் இந்திய மொழிகளில் தமிழ் முதன்மையாக உள்ளதாக 2017-ஆம் ஆண்டு நடைபெற்ற கூகுள் கணக்கெடுப்பில் தெரிய வந்துள்ளது.</p>
+</div>
+<br>
+</body>
+</html>

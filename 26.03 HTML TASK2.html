@@ -1,0 +1,86 @@
+<!--You need to create a responsive Team Members Profile Section for a corporate website. The
+section should:
+- Have cards with profile images, names and roles.
+- Use multiple Flexbox properties (e.g., justify-content, align-items, flex-wrap, gap)
+-Use CSS Flex items
+- Responsive layout (for different screen sizes)-->
+
+
+<html>
+<title>Portfolio</title>
+<link rel="style-sheet" href="https://fonts.googleapis.com/css?family=tangerine">
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOo6QUm_jVtraBc_hltQIeZMq4m_Wv8uTFcg&s" type="image/x-icon">
+<style>
+.h1{text-align:center;
+text-shadow:2px 2px 5px ;
+color:hotpink}
+
+
+.flex-container{display:flex;flex-direction:row;
+background-color:Seashell;
+gap:20px;
+flex-wrap:wrap;}
+.flex-container  > div{background-color:beige;
+margin:20px;
+padding:10px;
+font-size:20px;
+justify-content:space-around;
+align-content:center;
+
+width:500px;}
+img{clip-path:circle(30%);
+
+float:left;
+object-fit:cover;
+width:300px;
+margin-bottom:10px;}
+@media{max-width:900px){flex-container{flex-direction:coloumn;}}
+</style>
+<h1 class="h1">Meet Our Team</h1><br><br>
+
+<div class="flex-container">
+
+ <div>
+ <h1>The chairman</h1>
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJNQRZNeHIxpsrKVLvXFrVhs9TXcfvklR5Aw&s"><br>
+
+
+Dr. John Doe is a visionary leader with over 20 years of experience in the industry. 
+            His strategic mindset and innovative approach have been instrumental in shaping the success of our organization. 
+            Passionate about excellence, he continues to drive growth and inspire the team.
+
+ </div>
+ <div>
+ <h1>The Teamlead</h1>
+
+ <img src="https://www.isixsigma.com/wp-content/uploads/2018/11/shutterstock_1315451216-scaled.jpg"><br>
+
+
+Sarah Johnson leads the team with expertise in project management, ensuring smooth execution and collaboration across all department
+ </div>
+<div>
+<h1>The Project manager</h1>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9SYxCU6oinSoU__UHa3k2ZU2pGUP3LuG4NA&s"><br>
+A Project Manager is responsible for planning, executing, and overseeing projects from start to finish, ensuring they are completed on time, within budget, and to the required quality standards
+
+</div>
+<div>
+
+<h1>The Associate</h1>
+
+<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/ca/wp-content/uploads/2023/07/hire-a-sales-associate-ca-e1689835786612.jpg"><br>
+In a company context, an "associate" can refer to a company in which another company has significant influence but not control, often through holding a substantial portion of voting shares, or it can be a job title indicating a lower-ranking position than a "partner" or "manager</div>
+<div>
+
+<h1>The Employees</h1>
+
+<img src="https://etimg.etb2bimg.com/thumb/msid-103826738,imgsize-12632,width-1200,height=765,overlay-ethrme/news/hrtech/employee-sentiment-analysis-a-strategic-tool-for-employee-engagement-and-retention.jpg">
+In a company context, an employee is an individual hired to perform specific duties in exchange for compensation, typically wages or salary, and works under the direction and control of the employer. </div>
+</div>
+</div>
+
+<footer>
+<marquee>
+<h2 style="color:blue">Thank you for visiting us</h2>
+</marquee>
