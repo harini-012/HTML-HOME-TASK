@@ -1,0 +1,135 @@
+<!--
+. You are a front-end developer for a company that wants to easily switch between branding
+themes (e.g., for different product lines or seasonal events). Your task is to build a web page
+that supports switching between two themes — "Default" and "Summer" — using CSS
+variables.
+Define Global Variables in :root:
+• Colors: --primary-color, --secondary-color, --bg-color, --text-color
+• Typography: --font-family, --font-size
+• Spacing: --padding, --margin
+Apply Variables to a Simple Layout:
+• Header with company name
+• Navigation bar with 3 links
+• Content section with heading, paragraph, and call-to-action button
+• Footer
+Add a .summer-theme Class:
+• When applied to <body>, it should change the color scheme to a summer palette (e.g. warm
+orange and yellow tones)-->
+
+
+<html>
+<title>Languages</title>
+<style>
+:root{--primary:#004080;
+--secondary:green;
+--background:lightblue;
+--color:black;}
+.summer{--primary:orange;
+--secondary:brown;
+--background:lightyellow;
+}
+
+#toggle:checked~.container{--primary:orange;
+--secondary:brown;
+--background:lightyellow}
+body{background:var(--background)}
+
+
+.container {background-color:var(--background)}
+
+footer {
+margin-top:100px;
+font-size:20px;
+color:black;
+background-color:gray}
+
+
+
+
+
+.content{display:flex;gap:100px;;justify-Content:center}
+.content a{text-decoration:none;font-size:30px;color:red;}
+.content a:hover{color:var(--secondary);text-align:center;}
+h1{color:var(--primary);font-size:30px;}
+.items{border:2px solid indigo;}
+
+
+</style>
+
+
+
+<input type="checkbox" id="toggle">
+
+<body>
+<div class="container">
+
+<center>
+<h1 style="text-align:center">Let's Learn Languages</h1><br><br>
+<nav class="content">
+<a href="#home">Home</a>
+<a href="#html">Basics html</a>
+<a href="#python">Basics Python</a>
+</nav><br><br>
+</center>
+
+<h2 id="home"></h2>
+<div class="items">
+<h1>Duolingo</h1>
+<p>
+This new online course is made for those who want to learn a language quickly by focusing on what really matters: key vocabulary, essential phrases, and fundamental grammar. With its intuitive approach and outstanding design, this innovative method helps you build a natural, lasting connection with the language—making learning enjoyable, effective, and pressure-free.</p>
+These courses provide travelers with the essential tools to quickly learn key everyday expressions, such as greeting others, asking for directions, or ordering a meal at a restaurant. Specifically designed for absolute beginners, they enhance rapid memorization through visual and auditory associations. By the end of the course, learners will be able to communicate using simple words during their next trip.</p>
+<ul>
+<li>Master useful phrases from day one<br></li>
+<li>Memorize hundreds of words in just a few weeks<br></li>
+<li>Understand essential grammar structures<br></li>
+<li>Grasp the subtleties of local expressions<br></li>
+<li>Get real-time guidance from our AI assistant<br></li>
+</ul>
+</div>
+
+<h2 id="html"></h2>
+<div class="items">
+<h1>What is html?</h1>
+<p>
+HTML, which stands for HyperText Markup Language, is the foundation of most websites. It's a markup language used to structure and design web pages. HTML defines the content and structure of a webpage, telling a web browser how to display text, images, and other multimedia element</p>
+<h1>Markup Language:</h1>
+<p>HTML uses tags and elements to mark up the content of a web page, specifying how it should be presented. HTML defines the structure and organization of a webpage, from the overall layout to individual elements like headings, paragraphs, and links. </p>
+<h1>How it works</h1>
+When a web browser encounters an HTML file, it uses the HTML tags to interpret the content and display it correctly on the user's screen. 
+<h1>Building blocks:</h1>
+HTML elements, often referred to as tags, are the fundamental building blocks of a web page. They specify the type of content and how it should be rendered. 
+<h1>Examples:</h1>
+<p>Common HTML elements include  for paragraphs,  for headings,  for links,  for images, and  for tables. 
+Foundation of web development:
+HTML is a crucial component of web development, enabling the creation of interactive and dynamic web pages. </p>
+</div><br><br>
+<h2 id="python"></h2>
+<div class="items">
+<h1>What is python?</h1>
+<p>Python is a high-level, general-purpose programming language known for its readability and versatility. It's used in various fields like web development, data science, machine learning, and software engineering. Python's syntax emphasizes readability and uses indentation to define code blocks, making it easier to learn and maintain. </p>
+
+
+<h1>Interpreted:</h1>
+<p>Python code is executed line by line by an interpreter, allowing for quick prototyping and testing. </p>
+<h1>Object-Oriented:</h1>
+<p>Python supports object-oriented programming, where data and methods are encapsulated into objects. </p>
+<p>High-Level:</p>
+<p>Python handles many low-level details, allowing developers to focus on the problem at hand. </p>
+<h1>Dynamic Typing:</h1>
+<p>Variable types are not explicitly declared; they are inferred at runtime.</p> 
+<h1>Large Standard Library:</h1>
+<p>Python comes with a comprehensive collection of built-in modules and packages for various tasks. </p>
+<h1>Cross-Platform:</h1>
+<p>Python can run on different operating systems like Windows, macOS, and Linux. </p>
+<h1>Easy to Learn:</h1>
+<p>Python's syntax is relatively simple and similar to English, making it beginner-friendly. </p>
+</div><br><br>
+<button>
+<a href="https://medium.com/@surajit.das0320/registry-in-python-eb99e67d0763">Register now</button>
+<footer>
+<p>&copy;Duolingo</p>
+<p>Contact:9360879353
+</footer>
+</center>
+</body>
+</html>

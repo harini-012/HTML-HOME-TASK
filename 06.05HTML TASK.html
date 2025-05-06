@@ -1,0 +1,58 @@
+<!--Date: 6-5-25
+Task 1:
+You're building a dashboard for a web application that shows different types of
+system messages to users. Each message has a different purpose (e.g., success,
+error, info, warning), and you want to use color coding to help users quickly
+understand the message type.
+Requirements
+1. Create 4 notification messages, each in a <div>, with:
+o A different Bootstrap .bg-* class to indicate the message type.
+o A matching .text-* class for readable text (e.g., white on dark
+backgrounds).
+o An appropriate emoji or icon to enhance the message.(eg:-
+Error:</strong> Unable to connect to the server. Please try again.)
+o Bolded message title and a short description underneath.
+2. Use these four message types:
+o Success: Green background and white text
+o Error: Red background and white text
+o Info: Blue background and white text
+o Warning: Yellow background and dark text
+3. Include all messages inside a <div class="container"> for layout
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Message System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color:#FFE4E1">
+
+<h1 style="text-align:center ;font-size:30px;color:indigo;">Quiz Club</h1><br><br>
+<h1 style=" font-size:30px;color:Red;padding:0 15px">Rules and Regulations:</h1><br><br>
+
+
+<p class="text-justify" style="font-size:25px;padding:0 15px;"> Welcome to the Quiz!
+We’re excited to have you here! Before you begin, we want to ensure you have a smooth and stress-free experience. During the quiz, you’ll see different messages appear on your screen. These messages help you understand what’s happening — whether something went right, there’s an issue, or just a helpful reminder.
+
+To make these messages easy to recognize and respond to, we use a combination of symbols (emojis) and color-coded notifications. This approach helps you quickly identify the nature of the message without needing to read too much during a timed quiz.</p>
+</p><br><br>
+<div class="container">
+<div class="bg-success" style="background-color:darkgreen">
+<div class="text-success" style="font-size:30px;color:white"><dl><dt>🏆Success</dt><dd style="font-size:20px;"> You have won the quiz</dd></dl></div>
+</div><br><br>
+<div class="bg-danger" style="background-color:darkred">
+<div class="text-danger" style="font-size:30px;color:white;"><dl><dt>❗Error</dt> <dd style="font-size:20px">Network Failed<dd></dl></div>
+</div><br><br>
+<div class="bg-info" style="background-color:darkblue">
+<div class="text-info" style="font-size:30px;color:white;"><dl><dt>ⓘ Information</dt> <dd style="font-size:20px">Please Read out the rules of the quiz<dd></dl></div>
+</div><br><br>
+<div class="bg-danger" style="background-color:yellow">
+<div class="text-info" style="font-size:30px;color:darkred;"><dl><dt>⚠ Warning</dt> <dd style="font-size:20px">Don't navigate windows while playing quiz<dd></dl></div>
+</div>
+</body>
+</html>	

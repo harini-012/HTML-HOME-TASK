@@ -1,0 +1,155 @@
+<!--Date : 5-5-25
+1. Create a simple responsive web page layout using HTML and CSS that adapts across desktop,
+tablet, and mobile screen sizes.
+Layout Structure
+o A header with a site title or logo.
+o A navigation bar with 3–5 links.
+o A main content area with two columns:
+▪ Primary content (e.g. article or text)
+▪ Sidebar (e.g. links or widgets)
+o A footer.
+Responsive Behavior
+o On desktop (width ≥ 992px): display the two columns side by side.
+o On tablet (width between 768px and 991px): stack the columns vertically.
+o On mobile (width < 768px): collapse navigation into a vertical list and stack all
+elements-->
+
+
+<!DOCTYPE html>
+<html>
+<title>GoodReads</title>
+<meta name="viewport" content="width=device-width,initial scale=1">
+<link rel="icon"  size="32X32" type="image/x-icon" href="https://i.guim.co.uk/img/static/sys-images/BOOKS/Pix/pictures/2013/4/2/1364908022664/Goodreads-007.jpg?width=465&dpr=1&s=none&crop=none">
+<style>
+:root{--header:#ff8080;}
+h1{color:var(--header);font-family:Arial Narrow}
+.container{display:flex;align-items:center;gap:100px;justify-content:Center;font-size:25px;flex-wrap:wrap}
+.container a{text-decoration:none;color:#808080;text-align:center}
+.container a:hover{color:#4000ff}
+.items{border:2px solid black;background-color:pink;padding:10px;overflow:hidden;}
+
+.row {display: flex;}
+.column {width:50%;padding:10px;}
+
+footer {
+margin-top:100px;
+font-size:20px;
+color:black;
+background-color:gray}
+
+@media screen and (min-width:992px){.row {display: flex;}
+.column {width:50%;padding:10px;}}
+@media screen and (min-width:768px) and (max-width:991px){.row{flex-direction:column;}
+.column {width:100%;padding:10px;}}
+@media screen and (max-width:767px){.container{flex-direction:column;align-items:flex-start;gap:10px;}
+.row{flex-direction:column;}
+.column {width:100%;padding:10px;}}
+
+
+
+</style>
+
+<h1 style="text-align:center"><i>Goodreads</i></h1>
+<nav class="container">
+<a href="#home">Home</a>
+<a href="#india">India</a>
+<a href="#nature">Nature</a>
+<a href="#neighbourhood">Neighbourhood</a>
+<a href="#diplomacy">Diplomacy</a>
+</nav><br><br>
+<h2 id="home"></h2>
+<div class="items">
+<h1 style="font-size:25px;">About us</h1>
+<p>Goodreads is an American social cataloging website and a subsidiary of Amazon<br> that allows individuals to search its database of books, annotations, quotes, and reviews. Users can sign up and register books to generate library catalogs and reading lists.<br> They can also create their own groups of book suggestions, surveys, polls, blogs, and discussions. <br>The website's offices are located in San Francisc
+<h1 style="font-size:25px;">Who we are?</h1>
+<p>Goodreads is the world’s largest site for readers and book recommendations. Our mission is to help readers discover books they love and get more out of reading. Goodreads launched in January 2007.</h1>
+<h1 style="font-size:25px">What is in this section?</h1>
+<p>This is a website that is going to illustrate about India — a country known for its incredible diversity, deep-rooted history, and rich cultural heritage. Located in South Asia, India is the world’s most populous nation and the seventh-largest by area. It is home to a wide range of landscapes, languages, religions, and traditions. Through this website, you will explore various aspects of India, including its geography, people, festivals, food, and contributions to science, technology, and art. Whether you're learning about its ancient civilizations or its modern advancements, India offers a fascinating journey of discovery.
+</p>
+</div><br><br>
+<h2 id="india"></h2>
+<div class="items">
+<h1 style="font-size:25px">India</h1>
+<p>ndia is one of the oldest civilizations in the world with a kaleidoscopic variety and rich cultural heritage. It has achieved all-round socio-economic progress since its Independence. India has become self-sufficient in agricultural production and is now one of the top industrialised countries in the world and one of the few nations to have gone into outer space to conquer nature for the benefit of the people. It covers an area of 32,87,263 sq. km (1,269,346 sq mi), extending from the snow-covered Himalayan heights to the tropical rain forests of the south. As the 7th largest country in the world, India stands apart from the rest of Asia, marked off as it is by mountains and the sea, which give the country a distinct geographical entity. Bounded by the Great Himalayas in the north, it stretches southwards and at the Tropic of Cancer, tapers off into the Indian Ocean between the Bay of Bengal on the east and the Arabian Sea on the west.
+
+Lying entirely in the northern hemisphere, the mainland extends between latitudes 8° 4' and 37° 6' north, longitudes 68° 7' and 97° 25' east and measures about 3,214 km from north to south between the extreme latitudes and about 2,933 km from east to west between the extreme longitudes. It has a land frontier of about 15,200 km. The total length of the coastline of the mainland, Lakshadweep Islands and Andaman & Nicobar Islands is 7,516.6 km.</p>
+<h1 style="font-size:25px">Location</h1>
+<p>The Indian peninsula is separated from mainland Asia by the Himalayas. The Country is surrounded by the Bay of Bengal in the east, the Arabian Sea in the west, and the Indian Ocean to the south.</p>
+<h1 style="font-size:25px">Climate</h1>
+The climate of India can broadly be classified as a tropical monsoon one. But, in spite of much of the northern part of India lying beyond the tropical zone, the entire country has a tropical climate marked by relatively high temperatures and dry winters. There are four seasons:<br>
+i)winter (December-February)<br>
+ii)summer (March-June)<br>
+iii)south-west monsoon season (June-September)<br>
+iv)post monsoon season (October-November)<br>
+</div><br><br>
+<h2 id="nature"></h2>
+<div class="items">
+<h1 style="font-size:25px">Natural Resources</h1>
+<p>Coal, iron ore, manganese ore, mica, bauxite, petroleum, titanium ore, chromite, natural gas, magnesite, limestone, arable land, dolomite, barytes, kaolin, gypsum, apatite, phosphorite, steatite, fluorite, etc.</p>
+
+<h1 style="font-size:25px">Natural Hazzards</h1>
+<p>Monsoon floods, flash floods, earthquakes, droughts, and landslides.</p>
+<h1 style="font-size:25px">Environmental Issuues</h1>
+<p>Air pollution control, energy conservation, solid waste management, oil and gas conservation, forest conservation, etc.<p>
+
+
+</div><br><br>
+<h2 id="neighbourhood"></h2>
+
+<div class="items">
+<h1 style="font-size:25px">Neighbourhood</h1>
+<p>Afghanistan and Pakistan to the north-west; China, Bhutan and Nepal to the north; Myanmar to the east; and Bangladesh to the east of West Bengal. Sri Lanka is separated from India by a narrow channel of sea, formed by Palk Strait and the Gulf of Mannar.</p>
+<center>
+<img src="https://www.cheggindia.com/wp-content/uploads/2023/12/neighboring-countries-of-india.png" height="200" width="200">
+</center>
+</div><br><br>
+<h2 id="Diplomacy"></h2>
+
+<div class="items">
+<h2 id="diplomacy"></h2>
+<h1 style="font-size:25px">Diplomacy</h1>
+
+<div class="row">
+<div class="column">
+
+<h1 style="font-size:25px">Neighbourhood First</h1>
+<p>India prioritizes strong ties with its immediate neighbors in South Asia, including Afghanistan, Bangladesh, Bhutan, the Maldives, Nepal, Pakistan, and Sri Lanka. </p>
+</div>
+<div class="column">
+<a style="text-decoration:none" href="https://en.wikipedia.org/wiki/Foreign_relations_of_India">Neighbourhood</a>
+</div>
+</div>
+
+<div class="row">
+<div class="column">
+<h1 style="font-size:25px">Economic Diplomacy</h1>
+<p>The MEA's Economic Diplomacy Division focuses on promoting and safeguarding India's economic interests abroad, including in areas like trade and investment, according to the National Portal of India. </p>
+</div>
+<div class="column">
+<a style="text-decoration:none" href="https://www.india.gov.in/website-economic-diplomacy-division">Economic Diplomacy</a>
+</div>
+</div>
+<div class="row">
+<div class="column">
+<h1 style="font-size:25px">Balancing Act</h1>
+<p>India navigates a complex web of relationships, balancing its need for strategic partnerships with its desire for a multi-aligned approach, according to The International Institute for Strategic Studies. 
+ </div>
+<div class="column">
+
+<a style="text-decoration:none"  href="https://www.iiss.org/online-analysis/online-analysis/2025/03/indias-diplomacy-amid-changing-great-power-dynamics/">Balancing Act</a>
+</div>
+</div>
+
+
+</div><br><br>
+<center>
+<footer>
+<p>&copy;Goodreads</p>
+<p>Contact:9360879353
+</footer>
+</center>
+</body>
+</html>
+
+
+
