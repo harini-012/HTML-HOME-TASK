@@ -1,0 +1,60 @@
+<!--2. You're building a student assignment dashboard for a university web app using Bootstrap. The
+dashboard should display assignment statuses, allow students to switch between different subjects,
+show notifications, and track progress on current assignments.
+Requirements:
+1. Alert Message:
+Display an alert notifying the user about a deadline coming up.
+2. Badges:
+Show the number of pending assignments next to each subject.
+3. Button Group:
+Create a toggle-style button group to switch between subjects (Math, Science, English).
+4. Buttons:
+Include a “Submit Assignment” and a “Download Materials” button.
+5. Progress Bar:
+Show progress of assignment completion (e.g., 60%)-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<title>Assignment manager</title>
+<h1 style="text-align:center">Check Your Updates</h1><br><br>
+<body style="background-image:linear-gradient(45deg,  #d69e2e, #f6e05e);">
+
+
+<div class="container">
+<center>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVEZEj7ZsMASU_8OZQhCQHc1AzW7Rd83q7wA&s"><br><br>
+</center>
+<div class="alert alert-warning alert fade in" style="font-size:30px;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>The Maths assessment date is nearing! Study well and stay tuned</div>
+<div class="alert alert-danger">
+<p style="font-size:30px;">Note your assignments</p><br>
+<a href="#" style="font-size:25px;text-decoration:none;" class="mr-4">Mathematics <span class="badge">2</span></a>
+<a href="#" style="font-size:25px;text-decoration:none;" class="mr-4">Science <span class="badge">5</span></a>
+<a href="#" style="font-size:25px;text-decoration:none;" class="mr-4">Social <span class="badge">1</span></a>
+</div>
+<div class="alert alert-info">
+<p style="font-size:30px;color:brown;">Read your prefferend one</p><br>
+<div class="btn-group">
+<button type="button" class="btn btn-success  ">Tamil</button>
+<button type="button" class="btn btn-danger ">English</button>
+</div>
+</div>
+<div class="alert alert-danger">
+<p class="mr-4"style="font-size:30px;color:brown;">Submit the assignments</p><br>
+<button type="button" class="btn btn-info  ">Submit</button>
+<p class="mr-4"style="font-size:30px;color:brown;">Download Materials</p><br>
+<button type="button" class="btn btn-warning  ">Download</button>
+</div>
+<div class="alert alert-success">
+<p class="mr-4"style="font-size:30px;color:brown;">Note your progress</p><br>
+
+<div class="progress">
+<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;">60%</div>
