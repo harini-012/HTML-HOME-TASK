@@ -1,0 +1,115 @@
+<!--1. You're building the "Product Listing Page" for an e-commerce website named ShopZone
+using Bootstrap. Your goal is to create a responsive and user-friendly interface using the
+following components:
+Create a responsive navbar with the following:
+• Brand: "ShopZone"
+• Links: Home, Products, Cart, Contact
+• A toggle menu for smaller screens (hamburger menu)
+• Below the navbar, show a breadcrumb navigation like:
+Home > Products > Electronics
+On the left side of the page (in a sidebar), display a list group of product categories:
+• All Products
+• Electronics
+• Clothing
+• Home Appliances
+• Sports
+Highlight the active category as Electronics-->
+
+<!DOCTYPE html>
+<html>
+<body style="background:linear-gradient(to right,lightyellow,lightblue)">
+	<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<title>HP Commerce</title>
+	<link rel="icon" size="16X16"  href="https://marketplace.canva.com/EAFzjXx_i5w/1/0/1600w/canva-blue-illustrative-e-commerce-online-shop-logo-fZejT2DpGCw.jpg"type="image/x-icon">
+	<style>
+	.home{padding:20px;
+	margin:20px;
+	box-shadow:4px 8px 10px rgba(0,0,0,0.1);
+	
+	border-radius:20px;}
+s	.img-container{display:flex;
+	gap:40px;}
+	
+	</style>
+	<h1 style="text-align:center">E-Commerce,Easy Solution</h1><br><br>
+	<div class="container">
+	<nav class="navbar navbar-default ">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="#">Shop Zone</a>
+	</div>
+	
+	<div class="collapse navbar-collapse" id="navbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#cart">Cart</a></li>
+				<li><a href="#offers">offers</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+	<li><a href="#home">Home</li></a>
+	<li><a href="#products">Products</li></a>
+	</ul>
+	
+	</div>
+	
+	
+		</nav>
+		<ul class="breadcrumb">
+		<li><a style="text-decoration:none"href="#home">Home</li></a>
+		<li><a style="text-decoration:none" href="#products">Products</li></a>
+		<li><a style="text-decoration:none"href="#cart">Cart</a></li>
+				<li><a href="#offers">offers</a></li>
+			</ul>
+		<div class="col-md-3">
+		<ul class="list-group">
+		<li><a class="list-group-item"href="#">All products</a></li>
+		  <li><a class="list-group-item active"href="#">Electronics</a></li>
+		<li><a class="list-group-item"href="#">Clothing</a></li>
+		<li><a class="list-group-item"href="#">Home Appliances</a></li>
+		<li><a class="list-group-item"href="#">Sport</a></li>
+		</ul>
+		</div> 	<br><br>
+		<h2 id="home" style="text-align:center;color:indigo">60%offer for all the products</h2>
+		<marquee>
+			<h3>If you delay,Your products will flew away</h3>
+		</marquee>
+		<div class="home">
+			<h1 style="color:Indigo">About us</h1>
+			<p style="font-size:25px;">Amazon went public in May 1997.<br> It began selling music and videos in 1998, and began international operations by acquiring online sellers of books in the United Kingdom and Germany. In the subsequent year, it initiated the sale of a diverse range of products, including music, video games, consumer electronics, home improvement items, software, games, and toys.
+			In 2006, Amazon also launched the Fulfillment by Amazon program, which allowed individuals and small companies (called "third-party sellers") to sell products through Amazon's warehouses and fulfillment infrastructure.</p>
+		</div><br><br>
+		<div class="home">
+			<h1 id="products"style="color:Indigo">Products</h1>
+			<div class="img-container">
+				<img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+				<img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+				<img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/PC_QC_HOME_SIZE_186_2._SY116_CB567468236_.jpg">
+				<img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/PC_QC_HOME_SIZE_186_4._SY116_CB567468236_.jpg">
+				<img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/PC_QC_HOME_SIZE_186_2._SY116_CB567468236_.jpg">
+			</div>
+		</div><br><br>
+		<div class="home">
+			<h1 id="cart" style="color:Indigo">Cart</h1>
+			<button type="button" class="btn btn-success ">Visit the products</button>
+			<button type="button" class="btn btn-danger ">Save to Cart</button>
+			<button type="button" class="btn btn-warning ">View Offers</button>
+		</div><br><br>
+		<div class="home">
+			<h1 id="offers" style="color:Indigo">Offers</h1>
+		
+		<h3>Air conditioner <span class="badge"> 50%</span></h3>
+		<h3>Refrigirator <span class="badge"> 40%</span></h3>
+		<h3>Cooler <span class="badge"> 60%</span></h3>
+		<h3>Bed Spreads <span class="badge"> 20%</span></h3>
+		</div><br><br>
+		<marquee>
+		<h3> Thank you for visiting!!!</h3>
+</body>
+</html>

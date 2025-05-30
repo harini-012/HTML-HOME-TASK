@@ -1,0 +1,70 @@
+<!--2. You’ve been hired by a company called TechNova to build the "Our Team" section of their
+corporate website. This section should display a grid of team member profile cards using Bootstrap.
+Each card should contain basic information about a team member and be responsive.
+Requirements
+Card Layout (Per Member)
+Each team member’s card must include:
+• Profile image
+• Full Name
+• Job Title
+• Short bio or description
+• Contact button (e.g., "View Profile" or "Contact")
+Use Bootstrap's card component classes.-->
+
+<!DOCTYPE html>
+<html>
+<title>Tech Nova</title>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+.card-Layout{padding:20px}
+</style>
+<body style="background:linear-gradient(to right ,#e0f7fa, #ffffff")>
+	<h1 style="text-align:center;color:Blue;">TechNova</h1><br><br>
+	<center>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRImUCmCu7KBxuTi8kbgz-yGF0Q2OwHc40RMQ&s"style="border-radius:150px;"><br><br>
+		</center>
+		<div class="row">
+		<div class="col-md-4">
+			<div class="card bg-info card-Layout">
+			<center>
+				<div class="card-header" style="font-size:40px">Team Member</div><br><br>
+			<img src="https://static.vecteezy.com/system/resources/previews/009/317/078/non_2x/businesswoman-icon-logo-illustration-avatar-female-symbol-template-for-graphic-and-web-design-collection-free-vector.jpg" height="300" width="300"style="border-radius:150px"><br><br>	
+			</center>
+			<div class="card-title" style="font-size:18px"><strong>Full Name:</strong>Harini R</div><br>
+			<div class="card-title" style="font-size:18px"><strong>Job title:</strong>AI analyser</div><br>
+			<div class="card-text"><p style="font-size: 18px;"><strong style="font-size: 20px;">Job Description:</strong>An AI data analyst uses a combination of traditional data analysis techniques and advanced AI tools—such as machine learning algorithms and neural networks—to extract valuable insights from large datasets.
+  </p></div>
+			<button type="button" class="btn-info">View profile</button>
+			</div>
+			</div>
+			
+			
+			<div class="col-md-4">
+			<div class="card bg-info card-Layout">
+			<center>
+				<div class="card-header" style="font-size:40px">Team Member</div><br><br>
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_f7lyjU2ApYXcXJXk0kjDnyCpE5JuKWuPqg&s" height="300" width="300"style="border-radius:150px"><br><br>	
+			</center>
+			<div class="card-title" style="font-size:18px"><strong>Full Name:</strong>Angad</div><br>
+			<div class="card-title" style="font-size:18px"><strong>Job title:</strong>Data Analyst</div><br>
+			<div class="card-text"><p style="font-size: 18px;"><strong style="font-size: 20px;">Job Description:</strong>A "data analyst" is a professional who focuses on gathering, cleaning, analyzing, and visualizing data to uncover insights and inform business decisions. They use various tools and techniques to explore data, identify patterns</p></div>
+			<button type="button" class="btn-info">View profile</button>
+			</div>
+			</div>
+			
+			<div class="col-md-4">
+			<div class="card bg-info card-Layout">
+			<center>
+				<div class="card-header" style="font-size:40px">Team Member</div><br><br>
+			<img src="https://static.vecteezy.com/system/resources/previews/009/317/078/non_2x/businesswoman-icon-logo-illustration-avatar-female-symbol-template-for-graphic-and-web-design-collection-free-vector.jpg" height="300" width="300"style="border-radius:150px"><br><br>	
+			</center>
+			<div class="card-title" style="font-size:18px"><strong>Full Name:</strong>Priyanka</div><br>
+			<div class="card-title" style="font-size:18px"><strong>Job title:</strong>Full stack developer</div><br>
+			<div class="card-text"><p style="font-size: 18px;"><strong style="font-size: 20px;">Job Description:</strong>A full-stack developer is a software developer who can work on both the front-end (client-side) and back-end (server-side) of an application or website. They are responsible for designing, developing, and maintaining the entire application, from the user interface to the underlying server-side logic and database. </p>
+			<button type="button" class="btn-info">View profile</button>
+			</div>
+			</div>
