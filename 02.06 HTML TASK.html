@@ -1,0 +1,90 @@
+<!--
+1. You're creating a Job Application Portal. Users will submit their:
+• Full Name
+• Email Address
+• Phone Number
+• Upload Resume (PDF only)
+• Select Job Position
+• Brief Cover Letter
+The form should:
+• Use Bootstrap for clean styling
+• Use Flask to handle submissions
+• Validate fields (required inputs)-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	  <title>Infosys Job Application</title>
+	  <hr style="border:groove">
+	  
+	  <h1 style="text-align:Center">Application Form</h1>
+	  <hr style="border:groove">
+	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+	<form class="form-horizontal" action="/" method="POST" enctype="multipart/form-data">
+	<div class="form-group">
+		<div class="mb-3 p-3">
+			<label for="name" class="form-label">1.Applicant Name:</label>
+			<input type="text" name="name" id="name" class="form-control" required">
+		</div><br>
+		<div class="mb-3 p-3">
+			<label for="gender" class="form-label">2.Select Gender:</label><br>
+			<div class="form-check">
+				<input type="radio" name="gender" value="male" id="male" class="form-check-input" required">
+				<label for="male" class="form-label">Male</label><br>
+				
+				<input type="radio" name="gender" value="female" id="female" class="form-check-input" required">
+				<label for="female" class="form-label">Female</label><br>
+			</div>	
+		</div><br>
+		<div class="mb-3 p-3">
+			<label for="email" class="form-label">3.Email:</label>
+			<input type="email" name="email" id="email" class="form-control" required">
+		</div><br>
+		<div class="mb-3 p-3">
+			<label for="phoneno" class="form-label">4.Phone no:</label>
+			<input type="number" name="number" id="number" class="form-control" required">
+		</div><br>
+		<div class="mb-3 p-3">
+			<label for="file" class="form-label">5.Applicant Photo</label>
+			<input type="file" name="photo" id="photo" class="form-control" required">
+		</div><br>
+		<div class="mb-3 p-3">
+			<label for="position" class="form-label">6.Select Position</label>
+			<select class="form-select" name="position" required>
+				<option value="">--Choose</option>
+				<option value="data-analyst">Data Analyst</option>
+				<option value="ai-engineer">AI engineer</option>
+				<option value="financial-analyst">Financial Analyst</option>
+				<option value="Robotics Engineer">Robotics Engineer</option>
+				<option value="Human Resources">Human Resources</option>
+				<option value="Graphics Engineer">Graphics engineer</option>
+			</select>
+		</div><br>
+		<div class="mb-3 p-3">
+			<label for="experience" class="form-label">7.Do you have experience?</label><br>
+			<div class="form-check" required>
+				<input type="checkbox" class="form-check-input" name="exp" value="Yes" >
+				<label for="Yes"class="form-label">Yes</label>
+				<input type="checkbox" class="form-check-input" name="exp" value="No">
+				<label for="No"class="form-label">No</label>
+				
+		</div><br>
+		<div class="mb-3 p-3">
+			<label for="cover" class="form-label">8.Cover Letter: </label><br>
+			<textarea class="form-control" name="cover" rows="5" placeholder="If you have experience please specify the details" required></textarea>
+		</div><br><br>
+		<div class="mb-3 p-3">
+			<div class="form-check" required>
+					<input type="checkbox" class="form-check-input" name="check" value="check" >
+					<label for="check" class="form-label">The above details are true and have been filled with my knowledge</label>
+			</div>
+		</div><br><br>
+		<button type="submit" class="btn btn-info">Submit</button>
+
+	
