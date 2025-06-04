@@ -1,0 +1,53 @@
+<!--
+2. You're building a simple travel webpage where users click a button to reveal a travel
+destination, its description, and change the displayed image accordingly. (Use
+JavaScript to dynamically change the text and image when the button is clicked.)
+Use a paragraph element (<p>) to show a destination description.
+Use an image element (<img>) to display the related destination image.
+Use a button (<button>) to trigger the action.
+Use innerHTML and innerText to update the content.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Traveller</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+.card{margin:10px;
+padding:10px;
+box-shadow:8px 8px 8px rgba(0,0,0,0.1);
+background-color:lightyellow;
+color:black;
+border-radius:10px;
+width:600px;
+text-align:center}
+</style>
+<body style="background-color:lightblue">
+<h1 style="text-align:center;font-family:Sans serief;">Welcome To Traveller</h1><hr style="border-width:10px"><br><br>
+<center>
+<div class="card">
+<div id="p1">
+	<h1 id="heading" style="color:indigo">Ooty</h1><br>
+	<p style="font-size:30px;"id="description">she is charming, she is classy, she is unique – she is the Queen of Hill Stations in India. <br>Udhagamandalam, popularly known as Ooty is a hill station that will surely mesmerise you with its beguiling beauty.</p><br>
+	
+	<img id="image" src="https://www.tamilnadutourism.tn.gov.in/img/pages/mobile/avalanche-lake-ooty-1656163358_99ecfa86459a64d851be.webp" height="200" width="200"></div><br><br>
+	<div class="d-flex justify-content-center">
+	<button class="p-3 btn btn-success "type="button" onclick="change()">Dream more</button>
+	</div>
+</div>
+<script>
+ function change(){
+ document.getElementById("heading").innerText="The Queen of hills"
+ document.getElementById("description").innerText="A chain of misty hills spread across a lush green carpet – with plenty to see, enjoy and experience. Ooty is much more than a visitor’s paradise. It lends a piece of itself to its guests that they will be thrilled to take back. One of the most beautiful hill stations in India, Ooty nestles in the Nilgiri district of Tamil Nadu. An erstwhile summer resort of the British Raj in India, Ooty has transformed over the years into one of the most sought-after tourism destinations in Tamil Nadu."
+ document.getElementById("image").src="https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/ooty-1655457424_bca80f81e8391ebdaaca.webp"
+ }
+ </script>
+ </body>
+ </html>
