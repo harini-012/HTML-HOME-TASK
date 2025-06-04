@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Java Srcipt</title>
+		<h1 style="text-align:Center;">JavaScript</h1><br><br>
+		<script>
+		function light_ON(){document.getElementById('imgoff5').src='https://cdn.pixabay.com/photo/2017/01/26/08/07/light-bulb-2010022_640.jpg';}
+		function light_OFF(){document.getElementById('imgoff5').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloH-FFMUYIlsSSRMKZX_5ZMSTRC9C0T74QA&s';}
+		</script>
+	</head>
+	<body> 
+		<h1>Replacing Example by button using innerhtml</h1>
+		<p id="p1">When we click the button the content will be changed by javascript using innerhtml</p>
+		<button type="button" onclick='document.getElementById("p1").innerHTML="Content Changed"'>Click</button><br><br>
+		<h1>Replacing Example by button using innertext</h1>
+		<p id="p2">When we click the button the content will be changed by javascript using innertext</p>
+		<button type="button" onclick='document.getElementById("p2").innerText="Content Changed"'>Click</button><br><br>
+		<h1 >Light On and off example</h1>
+		<button onclick="document.getElementById('imgoff').src='https://cdn.pixabay.com/photo/2017/01/26/08/07/light-bulb-2010022_640.jpg'">Click to on</button>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloH-FFMUYIlsSSRMKZX_5ZMSTRC9C0T74QA&s" height="100" width="100" id="imgoff">
+		<button onclick="document.getElementById('imgoff').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloH-FFMUYIlsSSRMKZX_5ZMSTRC9C0T74QA&s'">Click to off</button><br><br>
+		<h1>Funtion</h1>
+		<button onclick="light_ON()">Click to on</button>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloH-FFMUYIlsSSRMKZX_5ZMSTRC9C0T74QA&s" height="100" width="100" id="imgoff5">
+		<button onclick="light_OFF()">Click to off</button><br><br>
+		<h1>External Script</h1>
+		<button onclick="light_ON()">Click to on</button>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloH-FFMUYIlsSSRMKZX_5ZMSTRC9C0T74QA&s" height="100" width="100" id="imgoff2">
+		<button onclick="light_OFF()">Click to off</button><br><br>
+		<script src="light.js"></script>
+		<h1>Document.write() Example</h1>
+		<script>
+		document.write("Harini")
+		</script>
+		<h1>Document.write() using button Example</h1>
+		<button type="button" onclick="document.write('Harini')">Click</button>
+		<h1>Window.alert() Example</h1>
+		<script>
+		window.alert("Hiiiiiiiiiiiii");
+		</script>
+		<h1>Console.log() Example</h1>
+		<script>
+		console.log("Hiiiiiiiiiiiii");
+		</script>
+		<h1>Statements</h1>
+		<p id="p3"></p>
+		<script>
+		var n2,n3;
+		const n1=10;
+		n2=5;
+		n3=n1+n2;
+		document.getElementById("p3").innerHTML="The sum is:" +n3+ " calculated";
+		</script>
+		<h1>Arrays</h1>
+		<p id="p4"></p>
+		<script>
+		const names=["Harini","Poorani","Ranjani"];
+		names[1]="Rajesh"
+		document.getElementById("p4").innerHTML=names;
+		
+		</script>
+		<h1>++ operator</h1>
+		<p id="p5"></p>
+		<script>
+		let a=3;
+		a++
+		document.getElementById("p5").innerHTML=a;
+		
+		</script>
+		<h1>-- operator</h1>
+<p id="p6"></p>
+<script>
+	let a =3;
+	a--;
+	document.getElementById("p6").innerHTML = a;
+</script>
+<h1>-- operator</h1>
+<p id="p1"></p>
+<script>
+	let a,b
+	a=6
+	b=5
+	c=(a!=b)
+	document.getElementById("p1").innerHTML =c;
+<h1>-- operator</h1>
+<p id="p1"></p>
+<script>
+let a,b;
+a=10;
+b=5;
+let c=(a>b)?"a is greater":"b is greater"
+document.getElementById("p1").innerHTML =c;
+	
+	
+</script>
+		
+		
+	</body>
+</html>
