@@ -1,0 +1,69 @@
+<!--
+1. You’re developing an access control system for a building. Employees can only enter
+if:
+Their ID card is valid, AND
+They are either:
+A full-time employee, OR
+They have special access clearance, AND
+They are not suspended
+Variables → change accordingly with varied test cases
+let hasValidID = true;
+let isFullTime = false;
+let hasSpecialAccess = true;
+let isSuspended = false;-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<body style="background:linear-gradient(to right,lightblue,lightgrey)">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+<title>Access Control System</title>
+<h1 style="text-align:center">Employee's Access Control</h1><br><br>
+<label for="name" class="form-label">Employee Name</label>
+<input type="text" name="name" id="name" class="form-control"><br><br>
+<label for="dob"class="form-label">Year of birth</label>
+<input type="number" name="dob" id="dob"class="form-control"><br><br>
+<label for="empid" class="form-label">Employee id</label>
+<input type="id" name="id" id="empid"class="form-control"><br><br>
+<label for="access" class="form-label">Click your credentials</label><br><br>
+<label for="id" class="form-label">Do you have id</label>
+
+<input type="checkbox" name="id" value="id" id="hasValidID">
+<label for="time" class="form-label">Are you a full time employee?</label>
+
+<input type="checkbox" name="fulltime" value="fulltime" id="isFullTime">
+<label for="time" class="form-label">Do you have special access?</label>
+<input type="checkbox" name="access" value="access"id="hasSpecialAccess">
+<label for="time" class="form-label">Are you suspended?</label>
+<input type="checkbox" name="sus" value="sus" id="isSuspended"><br><br>
+
+<button type="button" class="btn btn-danger" onclick="validate()">Check Your Access</button>
+<p id="p1"></p>
+<script>
+	function validate()
+	{
+	let name=document.getElementById("name").value;
+	let  dob=document.getElementById("dob").value;
+	let empid=document.getElementById("empid").value;
+	let hasValidID=document.getElementById("hasValidID").checked;
+	let isFullTime=document.getElementById("isFullTime").checked;
+	let hasSpecialAccess=document.getElementById("hasSpecialAccess").checked;
+	let isSuspended=document.getElementById("isSuspended").checked;
+	let result
+	if(hasValidID &&(isFullTime || hasSpecialAccess) &&!(isSuspended))
+	{
+	result="Access Granted"
+	}
+	else
+	{
+	result="Access Denied"
+	}
+	document.getElementById("p1").innerHTML=" Employee Name:"+ name + "<br> Employee DOB:" + dob + "<br>Employee id:" + empid + "<br>Result:" + result
+	}
+</script>
+</html>
+</body>

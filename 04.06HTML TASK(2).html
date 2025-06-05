@@ -1,0 +1,41 @@
+<!--
+You have an array of product objects, each with a name and price:
+Write a JavaScript for loop that:
+1. Loops through all products.
+2. Counts how many products cost more than Rs.50.
+3. Display the names of those products to the webpage.
+4. Displays the total count of products costing more than Rs.50.-->
+
+<!DOCTYPE html>
+<html>
+<title>Customer Products</title>
+<body style="background-color:Seashell">
+<h1 style="text-align:Center;">Customer Product Details</h1><br><br>
+<p id="p1">
+<center>
+<script>
+
+let n=0;
+let product=[{'Name':'Fibre Wire','Price':200},{'Name':'Shoes','Price':250},{'Name':'Pen','Price':20},{'Name':'Cofee','Price':10},{'Name':'Kurta','Price':200}]
+ let result ="<b>All Products:</b><br>";
+ for (let p of product){																																																	
+      result +=`Product Name:${p.Name},Price:Rs.${p.Price}<br>`;
+    }
+ result += "<hr style='border-width:5px '><br><b>Products costing more than ₹50:</b><br>";
+for (let p of product)
+{
+if (parseFloat(p.Price) > 50)
+{
+	let name=p.Name;
+	n++
+	result+="Product Name:</b>" + name+"<br>"
+}
+
+}	
+result+=("<b>Total count:</b>"+ n)
+
+document.getElementById("p1").innerHTML= result + "<hr style='border-width:5px'>"
+</script>
+</body>
+</html>
+

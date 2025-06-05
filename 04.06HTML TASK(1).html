@@ -1,0 +1,91 @@
+<!--2. You’re building a billing system for a mobile network provider. Customers can choose
+one of four data plans, each with different features and prices:
+Plan Code Plan Name Price Data Limit
+A Basic Plan $10 1 GB/month
+B Standard Plan $20 5 GB/month
+C Premium Plan $30 15 GB/month
+D Unlimited Plan $50 Unlimited
+• Take user input as a plan code (A, B, C, D)
+• Use a switch statement to:
+• Display the plan name
+• Show price and data limit
+• Handle invalid input with a default c-->
+
+<!DOCTYPE html>
+<html>
+<title>Mobile Networking System</title>
+<body style="background:linear-gradient(45deg,  #d69e2e, #f6e05e)">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+.card{margin:20px;
+padding:20px;
+border-radius:10px;
+box-shadow:8px 8px 8px rgba(0,0,0,0.1)
+color:#333;
+width:500px;
+height:400px;
+justify-content:center}
+</style>
+<h1 style="background-color:lightgrey;gap:20px;align-items:center" class="d-flex p-4 m-4" >
+<img src="https://i.gadgets360cdn.com/large/airtel_logo_1727256308352.jpg" class="rounded-circle " height="100" width="100">Networking Package
+</h1><br><br>
+
+<h2 style="text-align:center">Know your package</h2>
+<center>
+<div class="card">
+
+		<label for="name" class="form-label">Name</label>
+		<input type="text" name="name" id="name" class="form-control"><br><br>
+		<label for="pc"class="form-label">Plan Code</label>
+		<input type="text" name="pc" id="pc"class="form-control"><br><br>
+		<center>
+		<button type="button"class="tn btn-success"  style="width:100px" onclick="checkPackage()">Check Package</button></center><br><br>
+		<p id="p1">
+		<script>
+		function checkPackage()
+		{
+		let name=document.getElementById("name").value;
+		let pc=document.getElementById("pc").value;
+		let result;
+		switch (pc)
+			{ case 'A':
+			result= "<b>Plan Name</b>:Basic Plan <br>" + "<b>Price</b>:$10<br>" +"<b>Data Limit</b>:1GB/month"
+			break;
+			case 'B':
+			result= "<b>Plan Name</b>:Standard Plan <br>" + "<b>Price</b>:$20<br>" +"<b>Data Limit</b>:5GB/month"
+			
+			break;
+			case 'C':
+			result= "<b>Plan Name</b>:Premium Plan <br>" + "<b>Price:$30<br>" +"<b>Data Limit</b>:15GB/month"
+			
+			break;
+			case 'D':
+			result= "<b>Plan Name</b>:Unlimited Plan <br>" + "<b>Price:$50</b><br>" +"<b>Data Limit</b>:Unlimited"
+			
+			break;
+			default:
+			result="Plan Code is wrong"
+			break;
+			}
+			document.getElementById("p1").innerHTML="<b>User Plan</b> <br><br>:" + result
+			}
+		
+		</script>
+		</center>
+		</div>
+		<marquee>
+		<p style="font-size:25px;">Thanks For choosing us</p>
+		</marquee>
+</body>
+
+</html>
+
+		
