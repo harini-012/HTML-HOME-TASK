@@ -1,0 +1,100 @@
+<!--
+1. You’re developing an admin dashboard for an online bookstore. The HTML layout
+includes sections like book listings, categories, and a status panel.
+Write JavaScript to do the following:
+a) Get the title of the dashboard using its id and log it.
+b) Get all book items using their tag name and/or class name, and log the total count.
+c) Get all status messages using their class name and print each message.
+d) Change the text color of all <li> elements to blue.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>Literary Juction</title>
+</head>
+<body>
+	<h1 class="p-4 	m-3 rounded-circle"style="text-align:center;background-color:pink;height:100px;">Welcome to Literary Junction<span class="fs-6 text-muted">Read,Improve,continue</span></h1><br><br>
+	<div class="card m-3 p-4" style="background-color:Seashell;border-color:pink;border-width:5px">
+	<h2>Dash Board Title</h2><br><br>
+	<p id="p1" style="display:none">Book List</p>
+	<button type="button" class="btn btn-warning" onclick="gettitle()">Get title</button><br><br>
+	
+	
+	<script>
+		function gettitle()
+		{
+			let title=document.getElementById("p1").innerHTML
+			console.log(title)
+		}
+	</script>
+	</div><br><br>
+	<div class="card m-3 p-4" style="background-color:Seashell;border-color:pink;border-width:5px">
+	<h2>Book Items</h2><br><br>
+	
+	<ul class="ulClass">
+	<li class="liClass">Ponniyin Selvan</li>
+	<li class="liClass">Silapathigaram</li>
+	<li class="liClass">Thirukural</li>
+	<li class="liClass">Ramayanam</li>
+	</ul><br><br>
+	<button type="button" class="btn btn-warning" onclick="getcount()">Get Count</button><br><br>
+	
+	
+	<script>
+	function getcount()
+	{
+		const heading=document.getElementsByTagName("h2")
+		const items=document.getElementsByClassName("liClass")
+		console.log(items.length)
+	}
+	</script>
+	</div><br><br>
+		<div class="card m-3 p-4" style="background-color:Seashell;border-color:pink;border-width:5px">
+		<h2>Status Messages</h2><br><br>
+		
+		<button type="button" class="btn btn-warning" onclick="getStatus()">Get Status</button><br><br>
+		
+	<p id="p2">
+	
+		
+		<div class="divClass" style="display:none">
+			<div class="alert alert-success">Stock-Ponniyin selvan:50</div>
+			<div class="alert alert-success">Stock-Silapathigaram:30</div>
+			<div class="alert alert-success">Stock-Thirukural:10</div>
+			<div class="alert alert-success">Stock-Ramayanam:45</div>
+		</div>
+		<script>
+			function getStatus()
+			{
+				const status =document.getElementsByClassName("divClass")[0].innerHTML
+				document.getElementById("p2").innerHTML="Status"+status
+				
+			}
+		</script>
+		</div><br><br>
+		<div class="card m-3 p-4" style="background-color:Seashell;border-color:pink;border-width:5px">
+		<h2>Change color</h2><br><br>
+		<button type="button" class="btn btn-warning" onclick="changecolor()">Change Color</button><br><br>
+		
+		<p id="p3"></p>
+		<ul class="ulClass1">
+		<li class="liClass1">Ponniyin Selvan</li>
+		<li class="liClass1">Silapathigaram</li>
+		<li class="liClass1">Thirukural</li>
+		<li class="liClass1">Ramayanam</li>
+		</ul><br><br>
+	
+	
+	<script>
+	function changecolor()
+		{
+			
+			const items1=document.getElementsByClassName("liClass1")
+			for (let i=0;i<items1.length;i++)
+			{
+				items1[i].style.color="blue"
+			}
+		}
+	</script>
+			
