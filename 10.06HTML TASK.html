@@ -1,0 +1,64 @@
+<!--1. Toggle Button Click Event Listener
+Create two buttons:
+Start Button - Adds a click event listener to a square div that changes its color randomly.
+Stop Button - Removes the click event listener from the square div so clicking no longer
+changes its color.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Painting Shop</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="p-4 m-3 d-flex"style="text-align:center;background:linear-gradient(to right,lightblue,lightgrey);height:300px;border-radius:50px;align-items:center;gap:20px;">
+<img src="https://st2.depositphotos.com/5270307/10740/v/950/depositphotos_107402886-stock-illustration-paint-store-logo-template-design.jpg"height="200" width="200" class="rounded-circle">Choose Your Favourite color from the Painting
+</h1>
+<br><br>
+<center>
+<h1 style="color:coral;font-family:Brush Script MT">Stop at your favourite color</h1><br><br>
+<style>
+#squarediv{
+height:500px;
+width:1000px;
+background-color:lightpink;
+border:5px solid pink;
+}
+</style>
+<div id="squarediv">
+<button type="button" class="btn btn-success m-5"  onclick="startChange()" id="b1">See available colors-start</button>
+<button type="button" class="btn btn-danger" onclick="stopChange()" id="b2">Stop at your favourite color</button>
+</div>
+<p id="p1"></p>
+<script>
+
+	const square=document.getElementById("squarediv");
+	
+	let noclick=true;
+	let noadd=true;
+	function changeColor()
+	{
+		const x=Math.floor(Math.random()*256);
+		const y=Math.floor(Math.random()*256);
+		const z=Math.floor(Math.random()*256);
+	    const  bgcolor="rgb("+x+","+y+","+z+")";
+		square.style.background=bgcolor
+	}
+	function startChange()
+	{
+	if (noclick&&noadd)
+	{
+		square.addEventListener("click",changeColor)
+		noadd=false
+	}
+	}
+	function stopChange()
+	{
+		square.removeEventListener("click",changeColor)
+		noclick=false;
+	}
+</script>
+</body>
+</html>
+		
+	
