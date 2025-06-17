@@ -1,0 +1,99 @@
+<!--
+Simulate a user trying to withdraw money from an ATM. The system:
+• Resolves if the balance is sufficient.
+• Rejects if the balance is insufficient.
+All operations are asynchronous and delayed using setTimeout().
+Sample output:
+User 'Geetha' is trying to withdraw ₹3000...
+Checking account balance...
+Sufficient balance available.
+Processing withdrawal of ₹3000...
+Withdrawal successful! Remaining Balance: ₹2000
+User 'Geetha' is trying to withdraw ₹3000...
+Checking account balance...
+Insufficient balance. Transaction declined-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KVB ATM</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background:linear-gradient(to right, rgb(221, 94, 137), rgb(247, 187, 151))">
+	<div class="container-fluid">
+		<h2 class="m-4"style="text-align:center">24/7 ATM MACHINE</h2><br><br>
+		<center>
+			<img src="https://img.freepik.com/premium-vector/set-realistic-atm-machine-isolated-atm-bank-cash-machine-with-interface-keypad-slot-card_320857-1122.jpg?w=360"><br><br><br>
+		<div class="card bg-warning p-4 m-5">
+			<h4 style="text-align:center;color:white">How to use this machine?</h4><br><br>
+			<p><b>Insert your card:</b> Locate the card slot on the ATM and insert your card, chip-side up for most machines. <br>
+			   <b>choose your language:</b> Select your preferred language from the options on the screen. <br>
+			   <b>Enter your PIN:</b> Carefully enter your 4-digit PIN using the keypad. Shield the keypad with your hand to prevent others from seeing it. <br>
+			   <b>Select transaction type:</b> Choose the transaction you want to perform (e.g., Cash Withdrawal, Balance Inquiry, etc.). <br>
+			   <b>Choose account type:</b> If you have multiple accounts, select the one you want to use (e.g., Savings or Current). <br>
+			   <b>Enter the amount:</b> Enter the amount of cash you want to withdraw. <br>
+			   <b>Collect your cash:</b> The ATM will dispense the cash from the designated slot. Take your cash promptly. <br>
+			   <b>Collect your card and</b> receipt: The ATM will return your card and may offer a receipt. Take both with you.<br> 
+			   <b>End the transaction:</b> If you're finished, select the option to end the transaction. <br>
+			</p>
+		</div>
+		<div class="card p-4 m-5"><b>Proceed YOUR transactions</b>
+			<form class="form-horizontal">
+				<h2><marquee>Insert Your card</marquee></h2><br><br><br>
+				<label for="name" class="form-label"><b>Please Enter user name</b></label>
+				<input type="text" name="name" id="name" class="form-control" placeholder="Enter User name"><br><br>
+				<label for="money" class="form-label"><b>Enter the balance or withdraw amount</b></label>
+				<input type="text" name="money" id="money" class="form-control" placeholder="Enter the balance or withdraw amount"><br><br>
+				<label for="language" class="form-label"><b>Select language</b></label>
+				<select class="form-select">
+					<option value="">--select </option>
+					<option value="tam"> Tamil</option>
+					<option value="eng">English </option>
+					<option value="hind"> Hindi</option>
+				</select><br><br>
+			</form>
+			
+			<p id="p1">
+			
+				<button type="button" class="btn btn-danger" onclick="withdraw()">Withdraw</button>
+			</p>
+			<script>
+				function withdraw()
+				{	let balance=50000
+					let name=document.getElementById("name").value
+					let amount=parseInt(document.getElementById("money").value)
+					document.getElementById("p1").innerHTML=`User ${name} trying to withdraw ${amount}<br>`
+					const result=document.getElementById("p1")
+					result.innerHTML+="Checking Available Balance<br>"
+					
+									
+						
+					
+					let promise=new Promise(function(sufficient,insufficient)
+					
+						{
+							setTimeout(()=>
+							{
+								if (!isNaN(amount)&&amount>0&&amount<=balance)
+								{
+								result.innerHTML+="Processing Transaction<br>"
+								setTimeout(()=>{
+									let c_bal=balance-amount
+									sufficient("Sufficent Balance .....Take your Amount"+"<br>Current Balance:"+c_bal)
+									},1500)
+									}
+							
+								else
+								{
+									insufficient("No available balance....Your avilable balance is:"+balance)
+								}
+							},1000)
+						});
+						promise.then((message)=>{result.innerHTML+="<span class='text-success'><b>Congratulations</span></b><br>"+message});
+						promise.catch((error)=>{result.innerHTML+="<span class='text-danger'><b>Sorry</span></b><br>"+error});
+				}
+			</script>
+		</div>
+	</div>
+</body>
+</html>
