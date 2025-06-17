@@ -1,0 +1,125 @@
+<!--
+You're building a Fitness Training App that alternates between Exercise and Rest periods.
+Each round includes:
+• 30 seconds of Exercise (setInterval updates countdown)
+• 10 seconds of Rest (setTimeout waits before restarting)
+• The user can Pause or Restart the session at any time.
+Requirements:
+1. Exercise Timer runs for 30 seconds using setInterval.
+2. When 30 seconds are over, a 10-second Rest Timer starts using setTimeout.
+3. The UI shows which phase is active (Exercise or Rest).
+4. User can click Pause (which clears both timers).
+5. User can click Restart to start over-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FitFlow</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background:linear-gradient(to right, rgb(99, 99, 99), rgb(162, 171, 88));">
+	<h1 style="text-align:center;color:white;" class="m-3 p-4 ">Set Smart Fitness Goals Together. Goals are a great motivator<br><span class="fs-6 text-muted">-Be fit with FitFlow</span></h1>
+	<center>
+	<img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgFl8Ki9US5ksylZahnnKDLhw4puMgqQ7IWQ&s"style="width:500px;height:500px;">
+	<div class="card bg-success p-5 m-4 rounded-pill">
+		<h3 style="color:white;text-align:center">Know about us!</h3><br><br>
+		<h4>Welcome to FitFlow – Your Personal Fitness Companion!
+		
+
+Ready to take charge of your health? Whether you're just starting out or leveling up your routine, FitFlow helps you stay motivated, track progress, and crush your fitness goals. With customized workouts, smart tracking, and real-time insights, we make fitness simple, fun, and effective.
+
+Get stronger. Feel better. Start your journey today.</h4><br><br>
+		<h3 style="color:white;text-align:center">Learn about challenge	</h3><br><br>
+		<h4>Fitness isn't a straight line. That’s why FitFlow gives you the freedom to start when you're ready, pause when you need, restart when you're set, and rest without guilt.</h4><br><br>
+
+		<h3 style="color:white;text-align:center">Ready to take on a fitness challenge? Let’s begin!</h3><br><br>
+		
+		
+		
+		<div class="d-flex gap-5" style="align-items:center;justify-content:center">
+			<button class="btn btn-primary" type="button" id="b1" onclick="exersice()" >Start</button>
+			<button class="btn btn-success" type="button" id="b2" onclick="rest()" >Rest</button>
+			
+			
+			<button class="btn btn-warning" type="button" id="b3" onclick="pause()" >Pause</button>
+			<button class="btn btn-danger " type="button" id="b4" onclick="restart()">Restart</button>	
+			
+		</div>
+	</div>
+	<p id="p1">
+	<script>
+		let timer
+		let count=30
+		let rest_c=10
+		let rest_p
+		function clearAllTimers() 
+		{
+			clearInterval(timer);
+			clearTimeout(rest_p);
+		}
+		function exersice()
+		
+		{	clearAllTimers()
+			
+			count=30
+			document.getElementById("p1").innerHTML="<br><center><h1><strong>The Excersice is started</h1><br>"+count
+			
+			timer=setInterval(()=>{
+			count--
+			if (count>0){
+			document.getElementById("p1").innerHTML="<br><center><h1><strong>The Excersice is started</h1><br>"+count
+			}
+			else{
+		
+			clearInterval(timer)
+			document.getElementById("p1").innerHTML="<br><center><h1><strong>The Excersice is completed</center></h1>"
+			rest()
+			}
+		
+		},1000)
+		}
+		
+			function rest()
+			{
+				clearAllTimers()
+				rest_c=10
+				document.getElementById("p1").innerHTML="<br><center><h1><strong>Take Rest Buddy</h1>"+rest_c
+				function restcount()
+				{
+				rest_c--
+				if (rest_c>0)
+					{
+					document.getElementById("p1").innerHTML="<br><center><h1><strong>Take Rest Buddy</h1>"+rest_c
+					rest_p=setTimeout(restcount,1000)
+					}
+
+		
+				else
+				{
+					document.getElementById("p1").innerHTML="<br><center><h1><strong>Cheer Up! lets conitnue</center></h1>"
+				
+					exersice()
+				}
+					
+				
+				}
+				rest_p=setTimeout(restcount,1000)
+				
+			}
+		
+		function pause()
+		{clearAllTimers()
+		document.getElementById("p1").innerHTML="<br><center><h1><strong>Okay both cleared!!Lets start Fresh</center></h1>"
+			
+		}
+		function restart()
+		{	
+			clearAllTimers()
+			exersice()
+		}
+	</script>
+</body>
+</html>
+			
+		
+		
