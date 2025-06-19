@@ -1,0 +1,109 @@
+<!--
+1. You are building a school dashboard where teachers can:
+• Add new students with details
+• Merge student profiles
+• Access optional fields like guardian contact info safely
+Use:
+• spread to copy and merge student profiles
+• rest to collect multiple subjects and scores
+• optional chaining to access deeply nested values safely-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SAMOHSS dashboard</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background:linear-gradient(to right, rgb(173, 169, 150), rgb(242, 242, 242), rgb(219, 219, 219), rgb(234, 234, 234));">
+	<center>
+	
+		<img src="https://www.vidyalayaschoolsoftware.com/webassets/images/school_software_1.png">
+	<h1 class="p-5 m-4" style="text-align:center">Student Information Management System</h1>
+	</center>
+	<div class="card p-5 m-3 shadow-lg">
+		<h2 style="color:indigo">Instructions to teachers</h2><br>
+		<h5><b>Accessing Student Information:</b>Teachers can log in to the SMS to view student profiles, academic records, attendance history, and other relevant information</h5>
+		<h5><b>Attendance Tracking:</b>Use the system to mark attendance, view attendance reports, and track student absences. </h5>
+		<h5><b>Grading System:</b>Input grades, generate progress reports, and track student performance within the system. . </h5>
+		<h5><b>Assignment Management::</b>Create, assign, and track student assignments through the system. Some SMS platforms also allow for online submission </h5>
+	</div><br><br>
+	<div class="card p-5 m-3 shadow-lg" style="width:900px">
+		<h2 style="color:indigo">School Overall Performance</h2><br>
+		
+		<img src="https://cdn.boldbi.com/wp/pages/dashboards/education/school-performance-thumbnail-v1.webp" style="height:500px;width:500px"><br>
+		<p><b>It  provides an overview of school management metrics</b></p>
+	</div><br>
+	<div class="card p-5 m-3 shadow-lg">
+		<h2 style="color:indigo">Student Data Base.</h2><br>
+		<div class="alert alert-danger">Class Teachers,Please take your respective classess database for safety</div>
+		<div class="d-flex">
+			<button type="button" class="btn btn-info me-5" style="width:300px" onclick="newdetails()">View all students</button>
+			<button type="button" class="btn btn-warning me-5" style="width:300px" onclick="showScore()">View Topper of Class 12</button>
+			<button type="button" class="btn btn-danger me-5"style="width:300px" onclick="nest()">View The Topper Specific Personal details</button>
+		</div>
+		<p id="p1"></p>
+		<p id="p2"></p>
+		<p id="p3"></p>
+	</div>
+		<script>
+	
+			function newdetails()
+				
+			{
+				const old_student=[{"name":"Harini","Standard":"Twelve","Admission_No":123},{"name":"Poorani","Standard":"Twelve","Admission_No":124},{"name":"Priya","Standard":"Twelve","Admission_No":124}]
+				const new_student=[...old_student,{"name":"Rajesh","Standard":"Twelve","Admission_No":125},{"name":"Kapoor","Standard":"Twelve","Admission_No":127}]
+				let result="<b>Old Student:</b><br><br>"
+				old_student.forEach(student=>
+				{
+				result+= `Name:${student.name},Standard:${student.Standard},Admission No:${student.Admission_No}<br><br>`;
+				});
+				result+="<b>All students:</b><br><br>"
+				new_student.forEach(student=>
+				{
+				result+= `Name:${student.name},Standard:${student.Standard},Admission No:${student.Admission_No}<br><br>`;
+				});
+				document.getElementById("p1").innerHTML="<br>"+result+"<br>"
+			}
+			function score(...marks)
+			{
+				return marks.reduce((total,subject)=>
+				{
+					const mark=Object.values(subject)[0];
+					return total+mark
+				},0)
+			}
+			function showScore()
+			{
+			 const subjects = [{ "Subject-1":100},{ "Subject-2":89},{ "Subject-3":98}];
+			let subjectText = "<br><b>Subject-wise Marks:</b><br>";
+			subjects.forEach(subject => 
+			{
+			const [name,mark] = Object.entries(subject)[0];
+			subjectText += `${name}: ${mark}<br>`;
+			});
+			const result1=score({"Subject-1":100},{"Subject-2":89},{"Subject-3":98})
+			document.getElementById("p2").innerHTML="<b>Topper Mark in 12th out of 300:</b>" + result1+subjectText
+			}
+			function nest()
+			{
+				const topper=	
+				{"name":"Harini","Standard":"Twelve","Admission_No":123 ,address:{"city":"Chennai","examno":1905876,"zipcode":600033,"mailid":"harinirajesh0519@gmail.com","subjects":["maths","computer"]}}
+				const mailid=topper?.address?.mailid;
+				const subjects = topper?.address?.subjects?.join(", ") || "Not Informed";
+				const city=topper?.address?.city
+				const phone=topper?.address?.phone
+				
+				const result2=`<b>Personal information</b><br> 
+				Name:${mailid||"Not Informed"}<br>
+				 Studied Subjects:${subjects||"Not Informed"}<br>	
+				 City:${city||"Not Informed"}<br>
+				 Number:${phone||"Not Informed"}<br>`
+				 document.getElementById("p3").innerHTML=result2
+			}
+				
+		</script>
+		
+		
+</body>
+</html>
+
