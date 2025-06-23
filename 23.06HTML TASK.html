@@ -1,0 +1,106 @@
+<!--Build any dashboard using AngularJS that:
+• Fetches weather data using $http.get() from a
+mock API.
+• Shows a “Loading...” indicator for 2 seconds
+using $timeout before displaying data.
+• Automatically refreshes data every 30 seconds
+using $interval.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather Indicator</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+</head>
+<body ng-app="app1"ng-controller="c1" style="background-color:lightblue">
+	<h1 class="text-center border shadow rounded m-4 p-3">Fetch the weather for your location</h1><br><br><br>
+	<center>
+	<div class="card m-4 p-3">
+	<h2>Stay with  updates</h2><br><br>
+	<h3 style="color:indigo;text-align:center"><strong>Current Time:</strong>{{currentTime}}</h3><br><br>
+    
+	<button class="btn btn-success" type="button" ng-click="fetchLocations()">Fetch Weather</button><br><br>
+	 <h4><span ng-if="isLoading" class="ms-3 text-warning">Loading...</span></h4><br><br>
+	
+	<ul>
+		<li ng-repeat="u in locations.concat(manualLocations)">
+		 <strong>{{u.city}}</strong> — {{u.temp}}°C — {{u.condition}}
+      </li>
+    </ul><br><br>
+
+	<h2>Add location</h2>
+	<input type="text" ng-model="newLocation.city" placeholder="Enter city"><br><br>
+	<input type="text" ng-model="newLocation.temp" placeholder="Enter your temperature"><br><br>
+	<input type="text" ng-model="newLocation.condition" placeholder="Enter your condition"><br><br>
+	<button ng-click="addLocation()" class="btn btn-info">Add User</button>
+	
+	<p class="text-success" ng-if="successMessage">{{successMessage}}</p>
+	<p class="text-danger" ng-if="errorMessage">{{errorMessage}}</p>
+	<script>
+		var app=angular.module("app1",[]);
+		app.controller("c1",function($scope,$http,$timeout,$interval)
+		{
+			$scope.locations=[]
+			$scope.manualLocations=[]
+			$scope.newLocation={}
+			$scope.successMessage=""
+			$scope.errorMessage=""
+			$scope.isLoading=false
+			$scope.currentTime=new Date().toLocaleTimeString()
+			$interval(function()
+			{
+				$scope.currentTime=new Date().toLocaleTimeString()
+			},3000);
+			$scope.fetchLocations=function(){
+				$scope.isLoading=true
+				$scope.successMessage=""
+				$scope.errorMessage=""
+				$timeout(function()
+				{
+				$http.get("https://mocki.io/v1/03478f3c-91f1-4aaa-8f30-996d1307b330")
+				.then (function(response)
+				{
+					$scope.locations=response.data;
+					$scope.successMessage = "Your Data is Loaded Successfully";
+					$scope.errorMessage = "";
+					$scope.isLoading=false
+				}
+				,
+				function(error)
+				{
+					$scope.errorMessage = "Failed to load user Data!!";
+					$scope.successMessage = "";
+					console.error(error);
+				});
+			},2000);
+			}
+			$scope.addLocation = function() {
+			if ($scope.newLocation.city && $scope.newLocation.temp && $scope.newLocation.condition) {
+			$scope.manualLocations.push(angular.copy($scope.newLocation));
+			$scope.successMessage = "New location added: " + $scope.newLocation.city;
+			$scope.errorMessage = "";
+			$scope.newLocation = {};
+			} else {
+			$scope.errorMessage = "Please fill out all fields!";
+			}	
+		};
+
+     
+      $interval($scope.fetchLocations, 3000);
+    });
+			
+			  </script>
+	
+		</body>
+</html>
+	
+				
+
+	
